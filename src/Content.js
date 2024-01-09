@@ -31,23 +31,21 @@ const Main = () => {
 
   return (
     <main>
-      <div>
-        <ul>
-          {items.map((item) => (
-            <li className="item" key={item.id}>
-              <input
-                type="checkbox"
-                checked={item.checked}
-                onClick={() => handleCheckBox(item.id)}
-              />
-              <label onDoubleClick={() => handleCheckBox(item.id)}>
-                {item.item}
-              </label>
-              <FaTrashAlt role="button" tabIndex="0" />
-            </li>
-          ))}
-        </ul>
-      </div>
+      <ul>
+        {items.map((item) => (
+          <li className="item" key={item.id}>
+            <input
+              type="checkbox"
+              checked={item.checked}
+              onClick={() => handleCheckBox(item.id)}
+            />
+            <label onDoubleClick={() => handleCheckBox(item.id)}>
+              {item.item}
+            </label>
+            <FaTrashAlt role="button" tabIndex="0" />
+          </li>
+        ))}
+      </ul>
     </main>
   );
 };
