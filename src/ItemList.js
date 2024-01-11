@@ -5,7 +5,7 @@ const ItemList = ({ items, handleCheckBox, handleDelete }) => {
   return (
     <ul>
       {items.map((item) => (
-        <li className="item" key={item.id}>
+        <li className="item">
           <input
             type="checkbox"
             checked={item.checked}
